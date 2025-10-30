@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>District Dashboard - MGNREGA AP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">← Back to Home</a>
+            <span class="navbar-brand">MGNREGA Dashboard</span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div id="dashboardError" style="display:none; color:white; background:#c00; padding:10px; text-align:center; border-radius:4px; margin-bottom:15px;"></div>
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div class="text-center my-4">
+            <h1 id="districtName" style="font-size:2.5rem; font-weight:bold;">District: Loading...</h1>
+            </div>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="row g-3 mt-3">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card kpi shadow-sm">
+                    <div class="card-body">
+                        <div class="kpi-label">📋 Job Cards Issued</div>
+                        <div class="kpi-value" id="totalJobCards">-</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card kpi shadow-sm">
+                    <div class="card-body">
+                        <div class="kpi-label">👷 Total Workers</div>
+                        <div class="kpi-value" id="activeWorkers">-</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card kpi shadow-sm">
+                    <div class="card-body">
+                        <div class="kpi-label">🏠 Households Worked</div>
+                        <div class="kpi-value" id="workCompleted">-</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card kpi shadow-sm">
+                    <div class="card-body">
+                        <div class="kpi-label">⏱️ Persondays Generated</div>
+                        <div class="kpi-value" id="persondaysGenerated">-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+         <div style="margin-bottom: 10px; font-size: 1rem; font-weight: bold;">
+            Showing data for: <span style="color:#2d7d2d;">Latest Month (most recent available)</span>
+        </div>
+        <div class="row g-3 mt-3">
+            <div class="col-12 col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <strong>📊 Last 6 Months Trend</strong>
+                    </div>
+                <div class="card-body">
+                        <canvas id="trendChart" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-12 col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <strong>📈 District vs State Average</strong>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="comparisonChart" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Explanation Box -->
+        <div class="alert alert-light border mt-4">
+            <strong>💡 What does this mean?</strong>
+            <div id="explainBox">
+                Higher job cards and persondays mean more families are getting work under MGNREGA. 
+                If values drop for many months, it may indicate fewer work opportunities in the district.
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-4 py-3 bg-light text-center">
+        <p class="text-muted mb-0">Data Source: OGD Platform India</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

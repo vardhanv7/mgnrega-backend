@@ -1,0 +1,82 @@
+/* General Body Styling */
+body {
+    background: #f0f8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 12px;
+    border: none;
+}
+
+/* KPI Card Styling */
+.kpi {
+    background: #ffffff;
+    border-left: 5px solid #198754;
+    transition: transform 0.2s;
+}
+
+.kpi:hover {
+    transform: translateY(-5px);
+}
+
+.kpi .kpi-label {
+    color: #6c757d;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.kpi .kpi-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #198754;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* Form Select */
+select.form-select {
+    min-width: 200px;
+}
+
+/* Chart Cards */
+.card-header {
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .kpi .kpi-value {
+        font-size: 1.5rem;
+    }
+    
+    h1.display-4 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Alert Box */
+.alert {
+    border-radius: 10px;
+}
+
+/* Button Hover Effect */
+.btn-success:hover {
+    background-color: #157347;
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}

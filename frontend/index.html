@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MGNREGA Dashboard - Andhra Pradesh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-dark bg-success">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">🌾 MGNREGA Andhra Pradesh Dashboard</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg">
+                    <div class="card-body text-center p-5">
+                        <h1 class="display-4 mb-4">अपने जिले का प्रदर्शन देखें</h1>
+                        <h2 class="mb-4">Check Your District's MGNREGA Performance</h2>
+                        
+                        <p class="lead text-muted mb-4">
+                            MGNREGA provides guaranteed employment to rural households. 
+                            Select your district to see how it's performing.
+                        </p>
+
+                        <!-- District Selection -->
+                        <div class="mb-4">
+                            <label for="districtSelect" class="form-label fs-5">
+                                <strong>Select Your District:</strong>
+                            </label>
+                            <select class="form-select form-select-lg" id="districtSelect">
+                                <option value="">-- Choose District --</option>
+                                <option value="ANANTAPUR">Anantapur</option>
+                                <option value="ALLURI SITHARAMA RAJU">Alluri Sitharama Raju</option>
+                                <option value="BAPATLA">Bapatla</option>
+                                <option value="CHITTOOR">Chittoor</option>
+                                <option value="EAST GODAVARI">East Godavari</option>
+                                <option value="ELURU">Eluru</option>
+                                <option value="KAKINADA">Kakinada</option>
+                                <option value="KRISHNA">Krishna</option>
+                                <option value="KURNOOL">Kurnool</option>
+                                <option value="NANDYAL">Nandyal</option>
+                                <option value="SRI SATHYA SAI">Sri Sathya Sai</option>
+                                <option value="TIRUPATI">Tirupati</option>
+                                <option value="VISAKHAPATNAM">Visakhapatnam</option>
+                                <option value="VIZIANAGARAM">Vizianagaram</option>
+                                <option value="WEST GODAVARI">West Godavari</option>
+                                <option value="Y.S.R">Y.S.R</option>
+                            </select>
+                        </div>
+
+                        <!-- View Dashboard Button -->
+                        <button class="btn btn-primary btn-lg" onclick="viewDashboard()">View Dashboard</button>
+                            View Performance Dashboard →
+                        </button>
+
+                        <!-- Info Box -->
+                        <div class="alert alert-info mt-4">
+                            <strong>ℹ️ What is MGNREGA?</strong><br>
+                            Mahatma Gandhi National Rural Employment Guarantee Act provides 
+                            100 days of guaranteed wage employment to rural households.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5 py-3 bg-light text-center">
+        <p class="text-muted mb-0">Data Source: Open Government Data (OGD) Platform India</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
